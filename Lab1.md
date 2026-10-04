@@ -6,7 +6,7 @@ Este repositorio documenta la implementación de una arquitectura de red en Micr
 
 La arquitectura consiste en dos redes virtuales (VNET1 y VNET2), cada una con una máquina virtual Windows, conectadas entre sí mediante peering para permitir comunicación privada bidireccional.
 
-![Diagrama de arquitectura]
+*[Diagrama de arquitectura]*
 
 <img width="856" height="508" alt="Lab_1" src="https://github.com/user-attachments/assets/06f11c8e-2ffa-4ea3-a6f0-649277eea425" />
 
@@ -59,13 +59,13 @@ Se crearon dos redes virtuales con rangos de direcciones IP distintos para evita
 
 Desde la página principal del portal de Azure, se usó la barra de búsqueda escribiendo "redes virtuales" para localizar el servicio.
 
-[Búsqueda del servicio 'Redes virtuales']
+#[Búsqueda del servicio 'Redes virtuales']
 <img width="1917" height="962" alt="Captura de pantalla 2026-10-04 001700" src="https://github.com/user-attachments/assets/993faea8-996e-4ae6-b163-0c0acb705f9b" />
 
 
 Al entrar, inicialmente no hay ninguna red virtual creada en la suscripción.
 
-[Vista del servicio sin recursos creados]
+*[Vista del servicio sin recursos creados]*
 <img width="1917" height="966" alt="Captura de pantalla 2026-10-04 001708" src="https://github.com/user-attachments/assets/fc36e9c1-e0c4-4bfb-8b37-9041fdcbf362" />
 
 
