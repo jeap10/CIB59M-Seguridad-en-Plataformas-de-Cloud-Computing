@@ -53,22 +53,124 @@ Se crearon dos redes virtuales con rangos de direcciones IP distintos para evita
 - **VNET1**: `10.1.0.0/16`
 - **VNET2**: `10.2.0.0/16`
 
-### Configuración de subredes en VNET1
+### Parte 1.A — Creación de VNET1
 
-Dentro del mismo asistente de creación de VNET1 (pestaña "Subnets"), se realizaron los siguientes ajustes:
+**1.1 — Acceder al servicio de Redes virtuales**
 
-1. Se renombró la subred por defecto y se cambió su espacio de direcciones de `10.0.0.0/24` a `10.1.0.0/24`, para mantener coherencia con el rango general de VNET1.
-2. Se agregó, dentro del mismo formulario, una segunda subred llamada exactamente `AzureBastionSubnet` (tamaño mínimo `/26`), requisito obligatorio de Azure para poder desplegar Azure Bastion más adelante (ver Paso 5).
+Desde la página principal del portal de Azure, se usó la barra de búsqueda escribiendo "redes virtuales" para localizar el servicio.
 
-> **Nota:** No es obligatorio crear la subred de Bastion en este mismo paso — también puede agregarse después, editando la VNET ya creada. En este laboratorio se hizo todo junto para ahorrar pasos.
+![Búsqueda del servicio 'Redes virtuales'](images/image1.png)
 
-![Creación de VNET1 con subredes configuradas](images/01-crear-vnet1.png)
+Al entrar, inicialmente no hay ninguna red virtual creada en la suscripción.
 
-### Configuración de subred en VNET2
+![Vista del servicio sin recursos creados](images/image2.png)
 
-De la misma forma, en el asistente de creación de VNET2 se renombró la subred por defecto y se cambió su espacio de direcciones de `10.0.0.0/24` a `10.2.0.0/24`, manteniendo coherencia con el rango general de VNET2 (`10.2.0.0/16`).
+**1.2 — Iniciar la creación de la red virtual**
 
-![Creación de VNET2 con subred configurada](images/01-crear-vnet2.png)
+Se hizo clic en "+ Crear". En la pestaña "Datos básicos" se seleccionó la suscripción y el grupo de recursos.
+
+![Pestaña Datos básicos del asistente](images/image3.png)
+
+Se asignó el nombre `VNET1` y la región `East US`.
+
+![Nombre VNET1 y región East US](images/image4.png)
+
+**1.3 — Configurar el espacio de direcciones**
+
+Por defecto, Azure propone el rango `10.0.0.0/16` con una subred `default` en `10.0.0.0/24`.
+
+![Espacio de direcciones por defecto](images/image5.png)
+
+Se accedió a editar la subred por defecto:
+
+![Acceso a edición de subred](images/image6.png)
+
+**1.4 — Ajustar el rango a 10.1.0.0/16**
+
+Se modificó la dirección inicial de `10.0.0.0/16` a `10.1.0.0/16`.
+
+![Espacio de direcciones actualizado a 10.1.0.0/16](images/image7.png)
+
+Dentro del panel "Editar subred", se renombró la subred a `Subnet1` y se ajustó su rango a `10.1.0.0/24`.
+
+![Panel Editar subred: Subnet1, 10.1.0.0/24](images/image8.png)
+
+Tabla de subredes ya actualizada:
+
+![Subred Subnet1 configurada](images/image9.png)
+
+**1.5 — Agregar la subred de Azure Bastion**
+
+Se hizo clic en "+ Agregar una subred" y se desplegó la lista de plantillas de propósito disponibles.
+
+![Lista de plantillas de propósito de subred](images/image10.png)
+
+Se seleccionó la plantilla **"Azure Bastion"**, que completa automáticamente el nombre como `AzureBastionSubnet` y asigna el rango `10.1.1.0/26` — subred de nombre obligatorio requerida por Azure para desplegar Bastion.
+
+![Plantilla Azure Bastion generando AzureBastionSubnet](images/image11.png)
+
+VNET1 queda con dos subredes: `Subnet1` (10.1.0.0/24) para las VMs, y `AzureBastionSubnet` (10.1.1.0/26) reservada para Bastion.
+
+![Resumen de ambas subredes en VNET1](images/image12.png)
+
+**1.6 — Revisar y crear**
+
+Validación final de la configuración antes de crear VNET1.
+
+![Resumen final antes de crear VNET1](images/image13.png)
+
+VNET1 creada, visible dentro del grupo de recursos.
+
+![VNET1 creada en el resource group](images/image14.png)
+
+### Parte 1.B — Creación de VNET2
+
+**2.1 — Iniciar la creación de VNET2**
+
+De regreso en el listado de redes virtuales (ya con VNET1 creada), se inició el asistente para la segunda red.
+
+![Listado mostrando VNET1 ya creada](images/image15.png)
+
+Se asignó el nombre `VNET2`, manteniendo la misma suscripción, grupo de recursos y región (`East US`) que VNET1 — requisito necesario para el peering posterior.
+
+![Datos básicos de VNET2](images/image16.png)
+
+Azure vuelve a proponer por defecto el rango `10.0.0.0/16`.
+
+![Espacio de direcciones por defecto para VNET2](images/image17.png)
+
+**2.2 — Ajustar el rango a 10.2.0.0/16**
+
+Se editó la subred por defecto, renombrándola a `Subnet2` y ajustando su rango a `10.2.0.0/24`, dentro de un espacio de direcciones `10.2.0.0/16` — distinto al de VNET1, evitando conflictos al configurar el peering.
+
+![Panel Editar subred: Subnet2, 10.2.0.0/24](images/image18.png)
+
+Tabla de subredes de VNET2 actualizada. A diferencia de VNET1, aquí **no se creó subred de Bastion**, ya que el laboratorio usa un único Bastion desplegado en VNET1 para administrar ambas VMs vía peering.
+
+![Subred Subnet2 configurada en VNET2](images/image19.png)
+
+**2.3 — Revisar y crear**
+
+Validación final de la configuración de VNET2.
+
+![Resumen final antes de crear VNET2](images/image20.png)
+
+Confirmación de implementación completada.
+
+![Implementación de VNET2 completada](images/image21.png)
+
+**2.4 — Verificación final**
+
+Ambas redes virtuales, VNET1 y VNET2, quedan creadas dentro del mismo grupo de recursos, listas para continuar con NSGs, VMs, Bastion y el peering.
+
+![Resource group mostrando VNET1 y VNET2](images/image22.png)
+
+### Resumen de direccionamiento
+
+| Red virtual | Espacio de direcciones | Subred(es) | Propósito |
+|---|---|---|---|
+| VNET1 | `10.1.0.0/16` | `Subnet1` (10.1.0.0/24)<br>`AzureBastionSubnet` (10.1.1.0/26) | VM V1 + Azure Bastion |
+| VNET2 | `10.2.0.0/16` | `Subnet2` (10.2.0.0/24) | VM V2 |
 
 ---
 
