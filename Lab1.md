@@ -65,7 +65,7 @@ Desde la página principal del portal de Azure, se usó la barra de búsqueda es
 
 Al entrar, inicialmente no hay ninguna red virtual creada en la suscripción.
 
-*[Vista del servicio sin recursos creados]*
+**[Vista del servicio sin recursos creados]**
 <img width="1917" height="966" alt="Captura de pantalla 2026-10-04 001708" src="https://github.com/user-attachments/assets/fc36e9c1-e0c4-4bfb-8b37-9041fdcbf362" />
 
 
