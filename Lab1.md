@@ -73,13 +73,13 @@ Al entrar, inicialmente no hay ninguna red virtual creada en la suscripción.
 
 Se hizo clic en "+ Crear". En la pestaña "Datos básicos" se seleccionó la suscripción y el grupo de recursos.
 
-![Pestaña Datos básicos del asistente]
+*[Pestaña Datos básicos del asistente]*
 <img width="1917" height="970" alt="Captura de pantalla 2026-10-04 001719" src="https://github.com/user-attachments/assets/868d8dd3-b212-457d-854b-bd75a336023a" />
 
 
 Se asignó el nombre `VNET1` y la región `East US`.
 
-![Nombre VNET1 y región East US](images/image4.png)
+*[Nombre VNET1 y región East US]*
 <img width="1917" height="966" alt="Captura de pantalla 2026-10-04 001815" src="https://github.com/user-attachments/assets/f56dc1aa-f9c6-4e24-a81e-b09064ddf9e7" />
 
 
@@ -87,13 +87,13 @@ Se asignó el nombre `VNET1` y la región `East US`.
 
 Por defecto, Azure propone el rango `10.0.0.0/16` con una subred `default` en `10.0.0.0/24`.
 
-![Espacio de direcciones por defecto](images/image5.png)
+*[Espacio de direcciones por defecto]*
 <img width="1917" height="962" alt="Captura de pantalla 2026-10-04 001824" src="https://github.com/user-attachments/assets/fe37f47a-921d-48d4-841e-d0a110877c9d" />
 
 
 Se accedió a editar la subred por defecto:
 
-![Acceso a edición de subred](images/image6.png) 
+*[Acceso a edición de subred]*
 <img width="1917" height="977" alt="Captura de pantalla 2026-10-04 001844" src="https://github.com/user-attachments/assets/f7d196be-7f88-47ba-b52a-182f24c8433d" />
 
 
@@ -101,19 +101,19 @@ Se accedió a editar la subred por defecto:
 
 Se modificó la dirección inicial de `10.0.0.0/16` a `10.1.0.0/16`.
 
-![Espacio de direcciones actualizado a 10.1.0.0/16](images/image7.png)
+*[Espacio de direcciones actualizado a 10.1.0.0/16]*
 <img width="1917" height="915" alt="Captura de pantalla 2026-10-04 001926" src="https://github.com/user-attachments/assets/42962861-b46f-46f4-9aae-fed6eb675a7a" />
 
 
 Dentro del panel "Editar subred", se renombró la subred a `Subnet1` y se ajustó su rango a `10.1.0.0/24`.
 
-![Panel Editar subred: Subnet1, 10.1.0.0/24](images/image8.png)
+*[Panel Editar subred: Subnet1, 10.1.0.0/24]*
 <img width="1917" height="968" alt="Captura de pantalla 2026-10-04 001944" src="https://github.com/user-attachments/assets/f6c5498e-2952-45dc-a1b3-960e8c7fceb3" />
 
 
 Tabla de subredes ya actualizada:
 
-![Subred Subnet1 configurada](images/image9.png)
+*[Subred Subnet1 configurada]*
 <img width="1917" height="968" alt="Captura de pantalla 2026-10-04 001954" src="https://github.com/user-attachments/assets/6891a76d-96e7-4441-b7a2-00882a171ead" />
 
 
@@ -121,19 +121,19 @@ Tabla de subredes ya actualizada:
 
 Se hizo clic en "+ Agregar una subred" y se desplegó la lista de plantillas de propósito disponibles.
 
-![Lista de plantillas de propósito de subred](images/image10.png)
+*[Lista de plantillas de propósito de subred]*
 <img width="1917" height="962" alt="Captura de pantalla 2026-10-04 002004" src="https://github.com/user-attachments/assets/3990b921-44f8-437d-af22-e1faaf1f69fd" />
 
 
 Se seleccionó la plantilla **"Azure Bastion"**, que completa automáticamente el nombre como `AzureBastionSubnet` y asigna el rango `10.1.1.0/26` — subred de nombre obligatorio requerida por Azure para desplegar Bastion.
 
-![Plantilla Azure Bastion generando AzureBastionSubnet](images/image11.png)
+*[Plantilla Azure Bastion generando AzureBastionSubnet]*
 <img width="1917" height="965" alt="Captura de pantalla 2026-10-04 002013" src="https://github.com/user-attachments/assets/36d5c104-97f3-42f6-8cad-d41f344b7e58" />
 
 
 VNET1 queda con dos subredes: `Subnet1` (10.1.0.0/24) para las VMs, y `AzureBastionSubnet` (10.1.1.0/26) reservada para Bastion.
 
-![Resumen de ambas subredes en VNET1](images/image12.png)
+*[Resumen de ambas subredes en VNET1]*
 <img width="1917" height="962" alt="Captura de pantalla 2026-10-04 002021" src="https://github.com/user-attachments/assets/b36014e6-d0fc-4245-ad28-a23612e02dd3" />
 
 
@@ -141,13 +141,13 @@ VNET1 queda con dos subredes: `Subnet1` (10.1.0.0/24) para las VMs, y `AzureBast
 
 Validación final de la configuración antes de crear VNET1.
 
-![Resumen final antes de crear VNET1](images/image13.png)
+*[Resumen final antes de crear VNET1]*
 <img width="1917" height="972" alt="Captura de pantalla 2026-10-04 002031" src="https://github.com/user-attachments/assets/7e827bc4-2812-4107-a854-02ea832473b8" />
 
 
 VNET1 creada, visible dentro del grupo de recursos.
 
-![VNET1 creada en el resource group](images/image14.png)
+*[VNET1 creada en el resource group]*
 <img width="1917" height="971" alt="Captura de pantalla 2026-10-04 002115" src="https://github.com/user-attachments/assets/a33e22cb-eb20-41f9-b8bd-c1acd073eee4" />
 
 
@@ -157,19 +157,19 @@ VNET1 creada, visible dentro del grupo de recursos.
 
 De regreso en el listado de redes virtuales (ya con VNET1 creada), se inició el asistente para la segunda red.
 
-![Listado mostrando VNET1 ya creada](images/image15.png)
+*[Listado mostrando VNET1 ya creada]*
 <img width="1917" height="968" alt="Captura de pantalla 2026-10-04 002126" src="https://github.com/user-attachments/assets/17dcf85d-2fce-49c0-94c2-f704912fb414" />
 
 
 Se asignó el nombre `VNET2`, manteniendo la misma suscripción, grupo de recursos y región (`East US`) que VNET1 — requisito necesario para el peering posterior.
 
-![Datos básicos de VNET2](images/image16.png)
+*[Datos básicos de VNET2]*
 <img width="1917" height="976" alt="Captura de pantalla 2026-10-04 002139" src="https://github.com/user-attachments/assets/d637baa4-ef60-4765-a985-8d5204c09dfb" />
 
 
 Azure vuelve a proponer por defecto el rango `10.0.0.0/16`.
 
-![Espacio de direcciones por defecto para VNET2](images/image17.png)
+*[Espacio de direcciones por defecto para VNET2]*
 <img width="1917" height="967" alt="Captura de pantalla 2026-10-04 002150" src="https://github.com/user-attachments/assets/deb0bba0-6ba6-4477-a90a-7025f159277e" />
 
 
@@ -177,13 +177,13 @@ Azure vuelve a proponer por defecto el rango `10.0.0.0/16`.
 
 Se editó la subred por defecto, renombrándola a `Subnet2` y ajustando su rango a `10.2.0.0/24`, dentro de un espacio de direcciones `10.2.0.0/16` — distinto al de VNET1, evitando conflictos al configurar el peering.
 
-![Panel Editar subred: Subnet2, 10.2.0.0/24](images/image18.png)
+*[Panel Editar subred: Subnet2, 10.2.0.0/24]*
 <img width="1917" height="956" alt="Captura de pantalla 2026-10-04 002203" src="https://github.com/user-attachments/assets/3c15e9e8-3a7e-4c1d-bd87-6394921bd30b" />
 
 
 Tabla de subredes de VNET2 actualizada. A diferencia de VNET1, aquí **no se creó subred de Bastion**, ya que el laboratorio usa un único Bastion desplegado en VNET1 para administrar ambas VMs vía peering.
 
-![Subred Subnet2 configurada en VNET2](images/image19.png)
+*[Subred Subnet2 configurada en VNET2]*
 <img width="1917" height="968" alt="Captura de pantalla 2026-10-04 002208" src="https://github.com/user-attachments/assets/7328669f-0691-421b-8a7a-a1dcbf103c3f" />
 
 
@@ -191,13 +191,13 @@ Tabla de subredes de VNET2 actualizada. A diferencia de VNET1, aquí **no se cre
 
 Validación final de la configuración de VNET2.
 
-![Resumen final antes de crear VNET2](images/image20.png)
+*[Resumen final antes de crear VNET2]*
 <img width="1917" height="970" alt="Captura de pantalla 2026-10-04 002223" src="https://github.com/user-attachments/assets/bad7daf9-9f0e-4eb0-a227-d2d356a8822d" />
 
 
 Confirmación de implementación completada.
 
-![Implementación de VNET2 completada](images/image21.png)
+*[Implementación de VNET2 completada]*
 <img width="1917" height="973" alt="Captura de pantalla 2026-10-04 002302" src="https://github.com/user-attachments/assets/88b2a7b9-275a-4158-ad8e-a5bd4913d457" />
 
 
@@ -205,7 +205,7 @@ Confirmación de implementación completada.
 
 Ambas redes virtuales, VNET1 y VNET2, quedan creadas dentro del mismo grupo de recursos, listas para continuar con NSGs, VMs, Bastion y el peering.
 
-![Resource group mostrando VNET1 y VNET2](images/image22.png)
+*[Resource group mostrando VNET1 y VNET2]*
 <img width="1917" height="967" alt="Captura de pantalla 2026-10-04 002311" src="https://github.com/user-attachments/assets/142f7480-de8f-4f88-a81c-fb96da7f0314" />
 
 
