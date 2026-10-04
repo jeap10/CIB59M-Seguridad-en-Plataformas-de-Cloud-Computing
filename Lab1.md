@@ -59,13 +59,13 @@ Se crearon dos redes virtuales con rangos de direcciones IP distintos para evita
 
 Desde la página principal del portal de Azure, se usó la barra de búsqueda escribiendo "redes virtuales" para localizar el servicio.
 
-![Búsqueda del servicio 'Redes virtuales'](images/image1.png)
+[Búsqueda del servicio 'Redes virtuales']
 <img width="1917" height="962" alt="Captura de pantalla 2026-10-04 001700" src="https://github.com/user-attachments/assets/993faea8-996e-4ae6-b163-0c0acb705f9b" />
 
 
 Al entrar, inicialmente no hay ninguna red virtual creada en la suscripción.
 
-![Vista del servicio sin recursos creados](images/image2.png)
+[Vista del servicio sin recursos creados]
 <img width="1917" height="966" alt="Captura de pantalla 2026-10-04 001708" src="https://github.com/user-attachments/assets/fc36e9c1-e0c4-4bfb-8b37-9041fdcbf362" />
 
 
@@ -73,7 +73,7 @@ Al entrar, inicialmente no hay ninguna red virtual creada en la suscripción.
 
 Se hizo clic en "+ Crear". En la pestaña "Datos básicos" se seleccionó la suscripción y el grupo de recursos.
 
-![Pestaña Datos básicos del asistente](images/image3.png)
+![Pestaña Datos básicos del asistente]
 <img width="1917" height="970" alt="Captura de pantalla 2026-10-04 001719" src="https://github.com/user-attachments/assets/868d8dd3-b212-457d-854b-bd75a336023a" />
 
 
