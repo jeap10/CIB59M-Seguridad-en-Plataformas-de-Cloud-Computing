@@ -32,7 +32,15 @@ Antes de crear cualquier recurso, se creó un **Resource Group** (grupo de recur
 4. Elegir la región (ej. `East US`) — **todos los recursos del laboratorio deben crearse en la misma región** para evitar problemas de compatibilidad, especialmente con el peering y el NAT Gateway.
 5. Clic en **"Review + create"** y luego **"Create"**.
 
-![Creación del Resource Group](images/00-crear-resource-group.png)
+![Creación del Resource Group]
+<img width="1917" height="965" alt="Captura de pantalla 2026-10-04 000745" src="https://github.com/user-attachments/assets/8a36720b-8f7e-46ec-925e-f1022815d618" />
+
+<img width="1917" height="965" alt="Captura de pantalla 2026-10-04 000806" src="https://github.com/user-attachments/assets/74bc72ca-1338-46e1-ac15-dfa8d42f7442" />
+
+<img width="1917" height="911" alt="Captura de pantalla 2026-10-04 000819" src="https://github.com/user-attachments/assets/fcbbe1eb-af70-4dec-8ea0-99cc7fbf7321" />
+
+<img width="1917" height="912" alt="Captura de pantalla 2026-10-04 000835" src="https://github.com/user-attachments/assets/36b6abf5-1123-4910-b88a-11ecc2585967" />
+
 
 > **Nota:** Tener todo organizado bajo un mismo Resource Group facilita mucho la limpieza al finalizar el laboratorio — basta con eliminar el grupo completo para borrar todos los recursos asociados de una sola vez.
 
