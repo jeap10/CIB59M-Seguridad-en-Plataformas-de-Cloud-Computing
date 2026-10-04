@@ -11,6 +11,7 @@ La arquitectura consiste en dos redes virtuales (VNET1 y VNET2), cada una con un
 <img width="856" height="508" alt="Lab_1" src="https://github.com/user-attachments/assets/06f11c8e-2ffa-4ea3-a6f0-649277eea425" />
 
 
+
 | Componente | Descripción |
 |---|---|
 | **VNET1** | Red virtual principal, contiene la VM `V1`, el NSG1, la subred de Bastion y el NAT Gateway |
